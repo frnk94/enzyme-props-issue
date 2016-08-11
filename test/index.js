@@ -20,15 +20,12 @@ describe('Integration tests', () => {
 	});
 
 	it('Should find a Component based on props via selector', () => {
-
 		expect(wrapper.find({ title:'h1' })).to.have.length(1);
 		expect(wrapper.find('[title="h1"]')).to.have.length(1);
 
 	});
 
 	it('Should find a Dom Element based on props via selector', () => {
-		const wrapper = mount(<App />, { attachTo:node });
-
 		expect(wrapper.find({ title:'div' })).to.have.length(1);
 		expect(wrapper.find('[title="div"]')).to.have.length(1);
 	});
